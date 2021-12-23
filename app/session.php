@@ -27,7 +27,10 @@ unset($_SESSION['pass']);
 session_destroy();
 
 //redirect page to login if failed
-header('Location: ../page_login.php?msg=failed');
+header('Location: page_login.php?msg=failed');
+} else 
+{
+    header('Location: products/prod_list.php');
 }
 
 ?>

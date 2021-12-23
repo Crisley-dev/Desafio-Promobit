@@ -30,7 +30,7 @@
             <div class="card-body p-5 text-center">
 
               <div class="mb-sm-4 mt-md-1 pb-3">
-                <form action="products/prod_list.php" method="post">
+                <form action="index.php" method="post">
                   <h3 class="fw-bold mb-2 text-uppercase">Acessar</h3>
                   <p class="text-white-50 mb-5">Entre com seu Usuario e Senha</p>
 

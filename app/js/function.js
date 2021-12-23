@@ -6,14 +6,17 @@ jQuery(function(){
 
         //Set the current page get from localstorage as active
         jQuery('a[href="'+ls+'"]').addClass('active')
+        jQuery('a[href="'+ls+'"]').css({
+            "text-decoration": "underline",
+        })
         
 
         // SideMenu active effect
         let active = jQuery('.menu').hasClass('active');
         if(active){
             jQuery('.menu.active').css({
-                "background-color": "#fff",
-                "color": "rgb(233, 192, 89)"
+                "background-color": "#034cb9",
+                "color": "#fff"
             })
         }
         
