@@ -1,0 +1,58 @@
+.card-text{
+    border-bottom:solid 1px;
+  }
+
+.sidebar-nav ul li a {
+    font-size: 26px;
+    text-decoration: none;
+    display: block;
+    padding: 6px 10px;
+    transition: 0.5s;
+    color: #fff;
+}
+
+.sidebar-nav ul li a:hover {
+    background-color: #8d8d8d;
+    border-radius: 4px;
+    color: rgb(233, 192, 89);;
+}
+.sidebar-nav .offcanvas {
+    width: 260px;
+    border: none;
+}
+.sidebar-nav .offcanvas ul li a span {
+    font-size: 18px;
+    position: relative;
+    top: -4px;
+    transition: 0.5s;
+}
+.sidebar-nav .offcanvas.show ul li a:hover span {
+    padding-left: 10px;
+}
+.sidebar-nav .dropdown-toggle::after {
+    position: relative;
+    top: 3px;
+}
+#offcanvasNavbar{
+    background-color: #0d6efd;
+}
+.navbar-toggler{
+    margin-left: 10px;
+    color: #fff;
+}
+.navbar-toggler-icon{
+    color: #fff;
+}
+.container{
+    max-width: 100% !important;
+}
+.nav-link{
+    font-size: 16px !important;
+    color: #fff;
+}
+
+body {
+    padding-top: 60px;
+  }
+  
+  

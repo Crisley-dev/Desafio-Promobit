@@ -1,0 +1,49 @@
+.gradient-custom {
+    /* fallback for old browsers */
+    background: rgb(104, 104, 104);
+  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgb(70, 70, 70), rgb(139, 139, 139));
+  
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgb(70, 70, 70), rgb(139, 139, 139))
+  }
+
+
+
+  /*config for eye icon that show password when clicked */
+  .field-icon {
+    font-size: 18px;
+    float: right;
+    margin-left: -25px;
+    margin-top: -33px;
+    position: relative;
+    z-index: 2;
+    color: #000;
+    left: -5;
+  }
+
+ /* Config of login failed message - Animation and colors */
+  .zoom-in-zoom-out {
+    animation: zoom-in-zoom-out 1s ease-out  ;
+    animation-iteration-count: 3;
+    color: #ee2930;
+    font-size: 18px;
+  }
+  
+  @keyframes zoom-in-zoom-out {
+    0% {
+      transform: scale(1, 1);
+    }
+    50% {
+      transform: scale(1.5, 1.5);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+  /* Set inputs size */
+  input{
+    width: 82%;
+    margin: auto;
+  }
