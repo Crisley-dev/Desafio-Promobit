@@ -1,4 +1,12 @@
 jQuery(function(){
+
+    jQuery.event.special.touchstart = {
+        setup: function( _, ns, handle ) {
+            this.addEventListener("touchstart", handle, { passive: !ns.includes("noPreventDefault") });
+        }
+      };
+
+      
     //Get de local value saved
     var ls = localStorage.getItem("opcao");
     //remove the active class form nav-itens
@@ -31,4 +39,22 @@ jQuery(function(){
             localStorage.setItem("opcao", op);
            
         })
+
+        jQuery('#product_tag').multiselect({
+            buttonClass: 'form-select',
+            templates: {
+                button: '<button type="button" class="multiselect dropdown-toggle" data-bs-toggle="dropdown"><span class="multiselect-selected-text"></span></button>',
+            },
+            includeSelectAllOption: true,
+            enableFiltering: false,
+            nonSelectedText: "Selecione...",
+            allSelectedText: "Todos Selecionados",
+            widthSynchronizationMode: 'ifPopupIsSmaller',
+            buttonWidth: '200px',
+            selectAllText: 'Selecionar Tudo'
+        });
+        
+
+
+ 
 })
