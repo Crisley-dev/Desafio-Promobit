@@ -17,7 +17,7 @@ for ($i=0; $i <= count($result) ; $i++) {
    $arr[] = $result[$i]['tname'];
    $arr[] = $result[$i +1]['tname'];
 }
-print_r($arr);
+
 ?>
 
 <!DOCTYPE html>

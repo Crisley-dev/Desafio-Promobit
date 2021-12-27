@@ -63,9 +63,29 @@ jQuery(function(){
     });
 
     jQuery('tr').click(function(){
-        Swal.fire({
-            html: '<form method="post" name="form_products">    <div class="form-outline form-white mb-4">        <div class="row p-3">            <div class="col col-sm-6 text-center">                <label class="form-label" style="font-size: 22px;" for="product_name">Nome do                    Produto</label>            </div>            <div class="col col-sm-6">                <input type="text" id="product_name" name="product_name"                    class="form-control form-control-md"  />            </div>        </div>        <div class="row p-3">            <div class="col col-sm-6 ">                <label class="form-label" style="font-size: 22px;" for="product_tag">Tag do                    Produto</label>            </div>            <div class="col col-sm-6">                <select name="product_tag" id="product_tag" multiple="multiple" class="form-control">                                                </select>            </div>        </div>        <div class="col p-5">        </div>            <button type="submit" class="btn btn-primary btn-lg" id="bt_submit">Cadastrar</button>    </div></form>'
-        })
+       let id = jQuery(this).find("td:eq(0)").text();
+       let name = jQuery(this).find("td:eq(1)").text();
+
+       jQuery.dialog({
+        content: function () {
+            var self = this;
+            return jQuery.ajax({
+                url: "",
+                dataType: "html",
+                method: "post",
+                data: {
+                  "id":id,
+                  "name":name
+                }
+            }).done(function (response) {
+                self.setContent(response);
+                self.setTitle('Editar Funcionario');
+            }).fail(function () {
+
+                self.setContent('Ocorreu um erro.');
+            });
+        },
+       })
     })
 
-    })
+})
