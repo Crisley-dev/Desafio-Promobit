@@ -102,6 +102,8 @@ jQuery(function () {
         })
     })
 
+    /* ------------------------------ prod_del.php ------------------------------ */
+
     jQuery('#tb_del_products tr').on("click", function () {
         let product_id = jQuery(this).find("td:eq(0)").text();
         let product_name = jQuery(this).find("td:eq(1)").text();
@@ -137,6 +139,11 @@ jQuery(function () {
         })
     })
 
+    /**
+     * Function to return the success and error messages from ajax request
+     
+     * @param {return from ajax} response 
+     */
     function statusMsg(response) {
         if (response == 'success') {
             jQuery.alert({
