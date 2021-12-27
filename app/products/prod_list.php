@@ -4,24 +4,15 @@ include(dirname(__DIR__) . DIRECTORY_SEPARATOR . 'import.html');
 include(dirname(__DIR__) . DIRECTORY_SEPARATOR . 'connection.php');
 include(dirname(__DIR__) . DIRECTORY_SEPARATOR . 'products' . DIRECTORY_SEPARATOR . 'menu.html'); 
 
-$sql = 'SELECT product.id as pid, product.name as pname, tag.id as tid,tag.name as tname FROM product INNER JOIN product_tag ON product.id = product_tag.product_id INNER JOIN tag ON product_tag.tag_id = tag.id';
+$sql = 'SELECT product.id as pid, product.name as pname, tag.id as tid,tag.name as tname FROM product INNER JOIN product_tag ON product.id = product_tag.product_id INNER JOIN tag ON product_tag.tag_id = tag.id order by product.id';
 $stmt = $pdo->prepare($sql);
 $stmt->execute();
 $result = $stmt->fetchAll();
 
-$arr = array();
-
-
-for ($i=0; $i <= count($result) ; $i++) {
-   if($result[$i]['pid'] == $result[$i+1]['pid'] )
-   $arr[] = $result[$i]['tname'];
-   $arr[] = $result[$i +1]['tname'];
-}
-
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -52,14 +43,13 @@ for ($i=0; $i <= count($result) ; $i++) {
                                 </thead>
                                 <tbody>
                                    <?php foreach($result as $data):
-
-                                  
+            
                                     ?>
                                     
                                     <tr>
                                         <td><?php echo $data['pid'];?></td>
                                         <td><?php echo $data['pname'];?></td>
-                                        <td><?php echo $data['tname'];?></td>
+                                        <td><?php echo $data['tname']; ?></td>
                                     </tr>
                                     <?php endforeach; ?>
                                 </tbody>

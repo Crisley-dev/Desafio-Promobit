@@ -65,7 +65,7 @@ $data = $stmt->fetchAll();
                                     <div class="col p-5">
 
                                     </div>
-                                        <button type="submit" class="btn btn-primary btn-lg" id="bt_submit">Cadastrar</button>
+                                        <button type="submit" class="btn btn-primary btn-lg" id="bt_submit_reg">Cadastrar</button>
     
                                 </div>
                             </form>
