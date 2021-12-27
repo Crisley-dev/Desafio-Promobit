@@ -30,6 +30,7 @@ session_destroy();
 header('Location: page_login.php?msg=failed');
 } else 
 {
+    $_SESSION['loggedin'] == true;
     header('Location: products/prod_list.php');
 }
 
