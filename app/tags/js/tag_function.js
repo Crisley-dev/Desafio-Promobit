@@ -1,15 +1,12 @@
 jQuery(function () {
-
     /* ------------------------------ tag_reg.php ------------------------------ */
 
+    //send the form data to control file insert.tag via ajax
     jQuery('#bt_submit_tag').on("click", function (e) {
         e.preventDefault();
         var tag = jQuery('#tag_name').val();
 
-        console.log(tag);
-        
-
-        jQuery.ajax({
+            jQuery.ajax({
             type: "post",
             url: "../tags/control/insert_tags.php",
             data: {
@@ -22,8 +19,9 @@ jQuery(function () {
         });
     })
 
-    /* ------------------------------ tag_list.php ----------------------------- */
+    /* ------------------------------ DATA TABLES ----------------------------- */
 
+    //render the DataTable plugin on system tables
     jQuery("#tb_list_tags,#tb_edit_tags,#tb_del_tags").DataTable({
         searching: false,
         "info": false,
@@ -40,11 +38,13 @@ jQuery(function () {
     /* ------------------------------ tag_edit.php ----------------------------- */
 
 
+   //on row click, open a window with the information of this row
+   
     jQuery('#tb_edit_tags tbody tr').click(function () {
 
         let tid = jQuery(this).find("td:eq(0)").text();
         let tname = jQuery(this).find("td:eq(1)").text();
-
+    // using the plugin jquery confirm open a the window for edit the infos through AJAX
         jQuery.dialog({
             content: function () {
                 var self = this;
@@ -64,6 +64,7 @@ jQuery(function () {
                     self.setContent('Ocorreu um erro.');
                 });
             },
+        //With the new window fully loaded call a new ajax to update the informations on db
             onContentReady: function () {
                 jQuery('#bt_edit_tag').on("click", function (e) {
                     e.preventDefault();
@@ -95,6 +96,7 @@ jQuery(function () {
 
     /* ------------------------------ tag_del.php ------------------------------ */
 
+    //on row click, show a alert with option to delete or not the tag clicked.
     jQuery('#tb_del_tags tr').on("click", function () {
         let tag_id = jQuery(this).find("td:eq(0)").text();
         let tag_name = jQuery(this).find("td:eq(1)").text();

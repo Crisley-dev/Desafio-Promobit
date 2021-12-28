@@ -21,6 +21,7 @@
     z-index: 2;
     color: #000;
     left: -5;
+    cursor: pointer;
   }
 
  /* Config of login failed message - Animation and colors */
@@ -44,6 +45,6 @@
   }
   /* Set inputs size */
   input{
-    width: 82% !important;
+    width: 82%;
     margin: auto;
   }

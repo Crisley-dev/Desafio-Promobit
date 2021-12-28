@@ -2,6 +2,7 @@ jQuery(function () {
 
     /* ------------------------------ prod_reg.php ------------------------------ */
 
+    //send the form data to control file insert.tag via ajax
     jQuery('#bt_submit_reg').on("click", function (e) {
         e.preventDefault();
         var product = jQuery('#product_name').val();
@@ -21,8 +22,9 @@ jQuery(function () {
         });
     })
 
-    /* ------------------------------ prod_list.php ----------------------------- */
+    /* ------------------------------ DATA TABLES ----------------------------- */
 
+    //render the DataTable plugin on system tables
     jQuery("#tb_list_products,#tb_edit_products,#tb_del_products").DataTable({
         searching: false,
         "info": false,
@@ -38,7 +40,8 @@ jQuery(function () {
 
     /* ------------------------------ prod_edit.php ----------------------------- */
 
-
+    
+    //on row click, open a window with the information of this row
     jQuery('#tb_edit_products tbody tr').click(function () {
 
         let pid = jQuery(this).find("td:eq(0)").text();
@@ -46,7 +49,7 @@ jQuery(function () {
         let tname = jQuery(this).find("td:eq(2)").text();
         let tid = jQuery(this).find("td:eq(3)").text();
 
-
+    // using the plugin jquery confirm open a the window for edit the infos through AJAX
         jQuery.dialog({
             content: function () {
                 var self = this;
@@ -68,6 +71,7 @@ jQuery(function () {
                     self.setContent('Ocorreu um erro.');
                 });
             },
+        //With the new window fully loaded call a new ajax to update the informations on db
             onContentReady: function () {
                 console.log(pname);
                 jQuery('#bt_edit_product').on("click", function (e) {
@@ -104,6 +108,7 @@ jQuery(function () {
 
     /* ------------------------------ prod_del.php ------------------------------ */
 
+    //on row click, show a alert with option to delete or not the tag clicked.
     jQuery('#tb_del_products tr').on("click", function () {
         let product_id = jQuery(this).find("td:eq(0)").text();
         let product_name = jQuery(this).find("td:eq(1)").text();

@@ -18,6 +18,7 @@ session_start();
   <script src="js/function_login.js"></script>
   <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../fontawesome/css/all.css">
   <link rel="stylesheet" href="css/page_login.css">
 </head>
 
@@ -52,7 +53,7 @@ session_start();
 
                   </div>
                   
-                  <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Esqueceu a Senha?</a></p>
+                  <p class="small mb-5 pb-lg-2"><a class="text-primary-50" href="#!">Esqueceu a Senha?</a></p>
 
                   <button class="btn btn-outline-light btn-lg px-5" type="submit">Entrar</button>
 

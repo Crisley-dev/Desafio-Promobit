@@ -41,10 +41,12 @@ jQuery(function(){
         })
 
         jQuery('#product_tag').multiselect({
+            //this is a temporary solution to multiselect plugin run in bootstrap 5
             buttonClass: 'form-select',
             templates: {
                 button: '<button type="button" class="multiselect dropdown-toggle" data-bs-toggle="dropdown"><span class="multiselect-selected-text"></span></button>',
             },
+            //
             includeSelectAllOption: true,
             enableFiltering: false,
             nonSelectedText: "Selecione...",

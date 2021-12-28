@@ -4,7 +4,7 @@ include_once("../../connection.php");
 
 
 $tag_id = filter_input(INPUT_POST, 'tag_id');
-
+//:)
 try{
 
     $sql = "DELETE from product_tag where tag_id = ?";
