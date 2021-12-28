@@ -16,9 +16,9 @@ session_start();
   <!-- Imports -->
   <script src="js/jquery.min.js"></script>
   <script src="js/function_login.js"></script>
-  <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../fontawesome/css/all.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
   <link rel="stylesheet" href="css/page_login.css">
 </head>
 
