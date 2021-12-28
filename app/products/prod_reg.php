@@ -1,4 +1,5 @@
 <?php
+include(dirname(__DIR__) . DIRECTORY_SEPARATOR . 'verify_login.php');
 
 include(dirname(__DIR__) . DIRECTORY_SEPARATOR . 'import.html');
 include(dirname(__DIR__) . DIRECTORY_SEPARATOR . 'connection.php');
@@ -31,7 +32,7 @@ $data = $stmt->fetchAll();
                     <div class="cad-header text-center underline">
                         <h3>Cadastrar Produtos</h3>
                     </div>
-                    <div class="card-body p-5 text-center">
+                    <div class="card-body p-3 text-center">
 
                         <div class="mb-sm-6 mt-md-2 pb-3">
                             <form method="post" name="form_products">

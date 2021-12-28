@@ -1,4 +1,6 @@
 <?php 
+include(dirname(__DIR__) . DIRECTORY_SEPARATOR . 'verify_login.php');
+
 include(dirname(__DIR__) . DIRECTORY_SEPARATOR . 'connection.php');
 
 

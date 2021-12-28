@@ -1,9 +1,7 @@
 <?php
- $curDir = dirname(__DIR__);
 
- include($curDir . DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . 'import.html');
+session_start();
 
-  
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -16,18 +14,21 @@
   <title>Acessar</title>
 
   <!-- Imports -->
+  <script src="js/jquery.min.js"></script>
   <script src="js/function_login.js"></script>
+  <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/page_login.css">
 </head>
 
 <body>
   <!-- Login Form -->
   <section class="vh-100 gradient-custom">
-    <div class="container py-5 h-100">
+    <div class="container py-4 h-100">
       <div class="row d-flex justify-content-center align-items-center h-75">
         <div class="col-12 col-md-8 col-lg-6 col-xl-5">
           <div class="card bg-dark text-white" style="border-radius: 1rem;">
-            <div class="card-body p-5 text-center">
+            <div class="card-body p-4 text-center">
 
               <div class="mb-sm-4 mt-md-1 pb-3">
                 <form action="index.php" method="post">

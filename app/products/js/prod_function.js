@@ -39,7 +39,7 @@ jQuery(function () {
     /* ------------------------------ prod_edit.php ----------------------------- */
 
 
-    jQuery('#tb_edit_products tr').click(function () {
+    jQuery('#tb_edit_products tbody tr').click(function () {
 
         let pid = jQuery(this).find("td:eq(0)").text();
         let pname = jQuery(this).find("td:eq(1)").text();

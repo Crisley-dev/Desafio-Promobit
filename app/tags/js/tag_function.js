@@ -40,7 +40,7 @@ jQuery(function () {
     /* ------------------------------ tag_edit.php ----------------------------- */
 
 
-    jQuery('#tb_edit_tags tr').click(function () {
+    jQuery('#tb_edit_tags tbody tr').click(function () {
 
         let tid = jQuery(this).find("td:eq(0)").text();
         let tname = jQuery(this).find("td:eq(1)").text();

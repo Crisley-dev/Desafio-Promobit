@@ -44,6 +44,6 @@
   }
   /* Set inputs size */
   input{
-    width: 82%;
+    width: 82% !important;
     margin: auto;
   }

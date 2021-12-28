@@ -1,8 +1,11 @@
 <?php
+include(dirname(__DIR__) . DIRECTORY_SEPARATOR . 'verify_login.php');
 
 include(dirname(__DIR__) . DIRECTORY_SEPARATOR . 'import.html');
 include(dirname(__DIR__) . DIRECTORY_SEPARATOR . 'connection.php');
 include(dirname(__DIR__) . DIRECTORY_SEPARATOR . 'products' . DIRECTORY_SEPARATOR . 'menu.html'); 
+
+
 
 
 $sql = 'SELECT product.id as pid, product.name as pname, tag.id as tid,tag.name as tname FROM product INNER JOIN product_tag ON product.id = product_tag.product_id INNER JOIN tag ON product_tag.tag_id = tag.id order by product.id';
